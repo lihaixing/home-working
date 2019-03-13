@@ -190,60 +190,7 @@ export default {
     }
   },
   created () {
-    let a = 5
-    function *gen () {
-      yield 'hello'
-      yield 'world'
-      console.log(a)
-      return 2
-    }
-    let mygen = gen()
-    a = 6
-    console.log(mygen.next())
-    console.log(mygen.next())
-    console.log(mygen.next())
-    console.log(mygen.next())
-    // function seShow () {
-    //   setTimeout(function () {
-    //     console.log(4)
-    //   }, 1000)
-    // }
-    async function af () {
-      await new Promise((resolve, reject) => {
-        setTimeout(function () {
-          console.log(4)
-          resolve(true)
-        }, 3000)
-      })
-      await new Promise((resolve, reject) => {
-        setTimeout(function () {
-          console.log(5)
-          resolve(true)
-        }, 1000)
-      })
-      console.log(6)
-      return 9
-    }
-
-    af().then(function (res) {
-      console.log(7)
-      console.log(res)
-    })
-    console.log(10)
-
-    function deepCopy (arr) {
-      let newArr = []
-      for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === 'object') {
-          newArr.push(deepCopy(arr[i]))
-        } else {
-          newArr.push(arr[i])
-        }
-      }
-      return newArr
-    }
-
-    console.log(deepCopy([1, 3, [5, 6, [7, 8]]]))
+    // 这里可以掉数据 初始化数据
   }
 }
 </script>
